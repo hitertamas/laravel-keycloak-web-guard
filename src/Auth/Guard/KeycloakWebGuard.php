@@ -120,10 +120,9 @@ class KeycloakWebGuard implements Guard
     {
         // Get Credentials
         $credentials = KeycloakWeb::retrieveToken();
-//var_dump($credentials);exit;
+
         if (empty($credentials)) {
-//            return false;
-//throw new \Exception('WJHEIUQWEIOW');
+            return false;
         }
 
         $user = KeycloakWeb::getUserProfile($credentials);
