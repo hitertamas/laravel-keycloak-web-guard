@@ -1,0 +1,41 @@
+{
+    "name": "hitertamas/laravel-keycloak-web-guard",
+    "description": "Simple Keycloak Guard to Laravel Web Routes (Legacy PHP)",
+    "homepage": "https://github.com/hitertamas/laravel-keycloak-web-guard.git",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "keycloak",
+        "jwt",
+        "authentication"
+    ],
+    "authors": [
+        {
+            "name": "Mário Valney",
+            "email": "mariovalney@gmail.com"
+        },
+        {
+            "name": "Tamás Hitér",
+            "email": "hiter.tamas@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "^6.5|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vizir\\KeycloakWebGuard\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vizir\\KeycloakWebGuard\\KeycloakWebGuardServiceProvider"
+            ],
+            "aliases": {
+                "KeycloakWeb": "Vizir\\KeycloakWebGuard\\Facades\\KeycloakWeb"
+            }
+        }
+    }
+}
